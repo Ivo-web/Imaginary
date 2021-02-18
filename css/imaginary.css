@@ -1,0 +1,1059 @@
+/*Mobile first*/ 
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Code pour le header.*/
+#imaginary-background
+{
+   background-color: floralwhite;
+}
+
+
+span {
+    font-family: 'Dancing Script', cursive;
+    
+
+    -webkit-transition: text-shadow 0.5s, color 0.5s;
+    -moz-transition: text-shadow 0.5s, color 0.5s;
+    -o-transition: text-shadow 0.5s, color 0.5s;
+    transition: text-shadow 0.5s, color 0.5s;
+}
+span:hover {
+    color: floralwhite;
+    text-shadow: 10px 5px 20px 20px black;
+    cursor: pointer;
+}
+
+
+.header-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px 0px 20px;
+
+
+}
+*
+{
+    color: black;
+}
+.title
+{
+   font-size: 70px;
+   margin-bottom: 1px;
+
+   font-family: 'Dancing Script', cursive;
+   color: floralwhite;
+   text-shadow: 0 0 5px black;
+
+   -webkit-transition: color 0.5s;
+   -moz-transition: color 0.5s;
+   -o-transition: color 0.5s;
+   transition: color 0.5s;
+}
+.title:hover {
+   color: black;
+   text-shadow: none;
+   cursor: pointer;
+}
+.slogan
+{
+  font-size: 30px;
+  margin-top: 1px;
+  
+  font-family: 'Dancing Script', cursive;
+  
+}
+.slogan:hover{
+    text-shadow: 0 0 5px black;
+}
+
+@media all and (min-width: 769px) and (max-width: 991px)
+{
+   .title
+   {
+     font-size: 100px;
+   }
+   .slogan
+    {
+       font-size: 40px;
+    }
+}
+@media screen and (min-width: 992px)
+{
+      .title
+      {
+        font-size: 120px;
+      }
+      .slogan
+      {
+          font-size: 50px;
+      }
+  
+   
+}
+
+
+
+
+
+
+ /*Code pour le menu nav*/
+
+ #navigation{
+     display: none;
+ }
+.block-bars
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+   
+    
+}
+.title-menu
+{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+}
+#bars
+{
+    color: floralwhite;
+    background-color: black;
+    border: 10px black solid;
+    font-size: 100px;
+
+
+    padding: 10px 30px 10px 30px;
+}
+#bars:active
+{
+     opacity: 0.3;
+}
+.menu {
+   display: none;
+
+   background-color: black;
+   border: 7px black solid;
+   margin-left: 40px;
+}
+.menu-checkbox:checked ~ .menu {
+    display: block;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    
+}
+#bars:hover {
+    cursor: pointer;  
+    box-shadow: black 7px 7px 7px;
+}
+.menu-checkbox {
+    opacity: 0;
+    position: absolute;
+    top: -5000px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+#connexion-link:hover{
+    color: aliceblue;
+}
+#inscription-link:hover{
+    color: aliceblue;
+}
+#administrator-link:hover{
+    color: aliceblue;
+}
+li
+{
+    list-style: none;
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.symbols-pc
+{
+    display: none;
+}
+
+
+/*Code pour le footer*/
+
+footer
+{
+    margin-top: 70px;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+     
+    font-size: 30px;
+}
+.legal
+{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+
+@keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+     50%{
+         transform: translateY(-150px);
+     }
+    100%{
+        transform: translateX(-3000px);
+    }
+}
+.legal{
+    
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*Format tablette*/
+
+@media all and (min-width: 769px) and (max-width: 991px)
+{
+   .legal
+   {
+       font-size: 40px;
+   }
+}
+
+/*Forma pour écran PC*/
+
+@media screen and (min-width: 992px)
+{
+     
+     /*code imaginary_nav*/
+    
+     .symbols-pc
+     {
+         display: block; 
+         display: flex;
+         justify-content: space-around;
+         margin: 0 70px 0 40px;
+
+         margin-top: 100px;
+     }
+     a{
+         font-size: 40px;
+     }
+    .title-menu 
+    {
+       display: none; 
+    }
+    #bars
+     {
+       display: none;
+     }
+     .menu
+     {
+       display: none;
+        border: none;
+        position: absolute;
+        left: -7000px;
+       }
+       #connexion-link , #inscription-link, #administrator-link
+       {
+           display: none;
+       }
+       #database-symbol, #inscription-symbol, #connexion-submit
+       {
+         font-size: 100px;
+        
+       }
+       #connexion-submit:hover{
+        text-shadow: black 7px 7px 7px;
+       }
+       #inscription-symbol:hover{
+        text-shadow: black 7px 7px 7px;
+       }
+       #database:hover{
+        text-shadow: black 7px 7px 7px;
+       } 
+      
+       #navigation {
+            font-size: 20px;
+            display: block;
+            display: flex;
+           justify-content: space-evenly;
+           margin-bottom: -100px;
+       }
+       
+      /*Code footer*/
+   
+}
+
+
+
+/*Code pour la page d'inscription.*/
+
+.title-inscription
+{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size:60px;
+
+  text-shadow: 0 0 5px black;
+}
+.block-inscription{
+   display: flex;
+   flex-direction: column;
+   margin: 30px 30px 0px 30px;
+}
+label
+{
+   display: flex;
+   justify-content: center;
+  
+   font-size: 30px;
+
+   color: black;
+}
+#inscription-input
+{
+  border: 10px black solid;
+  width: 400px;
+  height: 50px;
+  display: flex;
+  margin: auto;
+
+  font-size: 25px;
+}
+
+
+.inscription-submit
+{
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    height: 120px;
+    width: 300px;
+    font-size: 90px;
+
+    color: floralwhite;
+    text-shadow: 0 0 5px black;
+    background-color: floralwhite;
+    box-shadow: 0 0 10px  black;
+}
+.inscription-submit:hover{
+   cursor: pointer;
+
+   box-shadow: 10px 5px 20px 20px black;
+   text-shadow: 10px 5px 20px 20px black;
+   border: 5px black solid;
+}
+#inscription-error{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size:30px;
+  
+    text-shadow: 0 0 5px black;
+}
+
+
+
+
+
+
+/*Page d'inscription pour tablette*/
+
+@media all and (min-width: 769px) and (max-width: 991px){
+
+
+}
+
+
+
+
+
+
+
+
+
+/*Page connexion : imaginary_connexion.php*/
+body{
+    background-color: floralwhite;
+}
+.header-connexion
+{
+   font-family: 'Dancing Script', cursive;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.imaginary-connexion
+{
+  margin-top: 40px;
+  font-size: 70px;
+  color: black;
+
+}
+.label-connexion
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+.block-connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mail-connexion 
+{
+   border: 7px black solid;
+   text-align: center;
+
+   width: 300px;
+}
+.password-connexion
+{
+   border: 7px black solid;
+   text-align: center;
+
+   width: 300px;
+}
+.bouton-connexion{
+   border: 10px black solid;
+   background-color: white;
+   color: black;
+   margin-top: 30px;
+   height: 60px;
+
+}
+
+ 
+/*Page connexion pour tablette*/
+@media all and (min-width: 769px) and (max-width: 991px){
+
+    body{
+        background-color: floralwhite;
+    }
+   .header-connexion
+   {
+       font-family: 'Dancing Script', cursive;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+
+      
+   }
+   .imaginary-connexion
+   {
+      margin-top: 40px;
+      font-size: 100px;
+      color: black;
+   
+   }
+   .label-connexion
+   {
+      font-size: 90px;
+   }
+   .mail-connexion 
+   {
+       width: 500px;
+       border: 7px black solid;
+   }
+   .password-connexion
+   {
+       width: 500px;
+       border: 7px black solid;
+   }
+    .bouton-connexion{
+       border: 10px black solid;
+       background-color: white;
+       color: black;
+
+       width: 400px;
+       height: 80px;
+  
+   }
+  
+}
+
+
+
+/*Code pour imaginary_profil.php*/
+
+.imaginary-profil{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    width: 450px;
+
+  
+
+    margin: 50px 50px 0 50px;
+  
+   
+}
+
+
+.menu-profil{
+    display: none;
+
+}
+.checkbox-profil:checked ~ .menu-profil{
+    display: block;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 15px floralwhite dashed;
+ 
+    margin: 0 110px 0 110px;
+    
+
+}
+.checkbox-profil{
+    position: absolute;
+    left: -10000px;
+}
+.label-profil{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: aliceblue;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+
+    text-shadow: 0 0 5px black;
+     background-color: #1f1f1f;
+     border: 5px black solid;
+     text-shadow: 10px 1px 15px floralwhite;
+     width: 400px;
+}
+.label-profil:hover{
+    cursor: pointer;
+}
+.label-profil:active{
+  
+    background-color: floralwhite;
+    color: black;
+}
+.galerie, .store{
+    font-family: 'Dancing Script', cursive;
+    color: floralwhite;
+    text-shadow: 0 0 5px black;
+    font-size: 60px;
+    
+   
+}
+
+.solde{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    
+}
+.offre-10000{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*code du profil pour tablette*/
+@media all and (min-width: 769px) and (max-width: 991px){
+
+    .profil
+    {
+       font-size: 90px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Code pour la page imaginary store*/
+
+.product
+{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   font-family: 'Dancing Script', cursive;
+   font-size: 40px;
+}
+.product_name
+{
+
+   color: floralwhite;
+  font-size: 60px;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 0 0 5px black;
+
+  -webkit-transition: text-shadow 0.5s, color 0.5s;
+  -moz-transition: text-shadow 0.5s, color 0.5s;
+  -o-transition: text-shadow 0.5s, color 0.5s;
+   transition: text-shadow 0.5s, color 0.5s;
+}
+
+.image_product 
+{
+  width: 200px;
+  margin-top: -60px;
+  margin-bottom: -50px;
+
+}
+.image_product:hover {
+    cursor: pointer;
+    margin-top: 50px;
+}
+.image_product:hover + p{
+    opacity: 0;
+}
+.product_price {
+  margin-top: 1px;
+}
+.product_name:hover {
+    color: black;
+    cursor: pointer;
+}
+.acheter
+{
+    background-color: white;
+    border: 7px black solid;
+    padding: 5px 40px 5px 40px;
+}
+.product-id {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*Code pour imaginary_panier.php*/
+
+.section-panier {
+    margin-left: 50px;
+}
+.panier {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+
+}
+
+#back-to-store {
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+
+    font-size: 40px;
+}
+.quantite{
+    margin-top: -30px;
+}
+
+.delet-product {
+    color: floralwhite;
+    text-shadow: 0 0 5px black;
+    border: 5px floralwhite solid;
+    box-shadow: 0 0 5px 5px black;
+     width: 50px;
+     
+     margin-top: -20px;
+     
+ 
+}
+.delet-product:hover{
+    color: black;
+    text-shadow: 0 0 5px floralwhite;
+    border: 5px  floralwhite solid;
+    box-shadow: 0 0 5px 5px floralwhite;
+     width: 50px;
+
+}
+
+#form-panier {
+    margin: auto;
+    margin-top: 20px;
+    border: 5px black solid;
+    background-color: white;
+    width: 500px;
+}
+#panier-password {
+    display: flex;
+    margin: auto;
+    width: 300px;
+    height:30px;
+   font-size: 40px;
+   color: white;
+   border: 7px black solid;
+   background-color: black;
+   
+
+}
+#panier-submit{
+    display: flex;
+    margin: auto;
+
+    width: 200px;
+    height:50px
+}
+.buying-error{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+   
+
+
+/*Page galérie*/
+.block-product
+{
+    margin-top: 30px;
+    padding: 50px;
+}
+.galerie-nav
+{
+
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -70px;
+  font-family: 'Dancing Script', cursive;
+   
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+.image-collection-product
+{
+    height: 150px;
+    margin-bottom: 20px;
+}
+.balise {
+    font-size: 100px;
+    color: #1f1f1f;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+@media all and (min-width: 769px) and (max-width: 991px)
+{
+    .balise
+    {
+      font-size: 100px;
+    }
+}
+@media screen and (min-width: 992px)
+{
+    .balise
+    {
+      font-size: 120px;
+    }
+    
+}
+
+/*Code pour la page météo*/
+
+#weather-header{
+    background-image: url("../image/weather-background.png");
+    background-size: 150px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#weather-title{
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1px;
+    color: floralwhite;
+    text-shadow: 0 0 5px black;
+}
+#form-weather {
+    
+  display: flex;
+  flex-direction: column;
+align-items: center;
+    
+}
+
+#input-city-weather {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+   height: 30px;
+   width: 300px;
+}
+
+#submit-weather {
+    width: 300px;
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 30px;
+
+    width: 300px;
+    height: 50px;
+}
+
+#weather {
+    font-family: 'Dancing Script', cursive;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+#image-froid{
+    display: flex;
+    margin: auto;
+    border: 7px black solid;
+    width: 400px;
+}
+#image-glaçon{
+    display: flex;
+    margin: auto;
+   width: 400px;
+}
+@media all and (min-width: 769px) and (max-width: 991px)
+{
+    #weather-header{
+        background-size: 250px 250px;
+      
+    }
+    #weather-title{
+        font-size: 100px;
+    }
+}
+@media screen and (min-width: 992px)
+{
+     
+    #weather-header{
+        background-size: 300px 300px;
+      
+    }
+    #weather-title{
+        font-size: 120px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+/*Code pour la page "imaginary_tv"*/
+#header-tv {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+#section-tv  {
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    border: 15px black solid;
+    width: 500px;
+
+    background-color: bisque;
+}
+#bouton-zap {
+    color: bisque;
+
+    font-size: 30px;
+    border: 5px black solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 60px;
+    height: 50px;
+    margin: 100px 10px 0 10px;
+    padding: 2px 2px 2px 5px;
+
+    background-color:red;
+}
+#bouton-zap:active {
+    background-color: #b8193a;
+}
+
+#TV{
+   border: 5px black solid;
+   height: 380px;
+   width: 500px;
+}
+.chain-tv {
+    background-image: url('../image/vintage-screen.jpeg');
+    background-size: 500px 380px;
+}
+.angel1{
+    background-image: url("../image/angel.jpeg");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel2 {
+    background-image: url("../image/angel2.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel3 {
+    background-image: url("../image/angel3.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel4 {
+    background-image: url("../image/angel4.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel5 {
+    background-image: url("../image/angel5.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel6 {
+    background-image: url("../image/angel6.gif");
+    background-repeat: no-repeat;
+    background-size: 420px 380px;
+}
+.angel7 {
+    background-image: url("../image/angel7.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.angel8 {
+    background-image: url("../image/angel8.gif");
+    background-repeat: no-repeat;
+
+    background-size: 420px 380px;
+}
+.game-over {
+    background-image: url("../image/game-over.gif");
+    background-repeat: no-repeat;
+    background-size: 420px 380px;
+}
+#block-time 
+{ 
+  display: none;
+  margin: auto;
+  border: 5px white solid;
+  background-color: darkgrey;
+  width: 367px;
+
+  border: 7px black solid;
+  width: 500px;
+}
+.enregistrement, #time {
+   color: floralwhite;
+   margin-top: -3px;
+  
+  
+}
+.enregistrement {
+    display: none;
+}
+#time {
+    font-size: 30px;
+}
+.time-color {
+    color: floralwhite;
+}
+.time-color-red {
+    color: red;
+}
+
+.escalier {
+    background-image: url('../image/escalier.gif');
+    background-size: 420px 380px;
+}
+.noel {
+    background-image: url('../image/baba-noel.gif');
+    background-size: 420px 380px;
+}
+.niancat {
+    background-image: url('../image/niancat.gif');
+    background-size: 420px 380px;
+}
+.montana {
+    background-image: url('../image/montana.gif');
+    background-size: 420px 380px;
+}
+.trump {
+    background-image: url('../image/trump.gif');
+    background-size: 420px 380px;
+}
+.biden {
+    background-image: url('../image/biden.gif');
+    background-size: 420px 380px;
+}
+
+
+
+
+/*Code pour l'espace Admin*/
+#research-barre{
+    display:flex;
+    margin:auto;
+   width: 400px,
+}
+#database-block{
+    margin:auto;
+    width: 700px;
+}
+#data-table{
+     margin:auto;
+}
+.admin-database-link{
+    font-size: 20px;
+    margin-left:30px;
+}
+#block-pagination-link{
+    
+    display:flex;
+    justify-content:space-around;
+
+    margin-top:30px;
+}
+.admin-pagination-link{
+    font-size: 25px;
+
+}
